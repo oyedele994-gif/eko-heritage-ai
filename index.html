@@ -121,7 +121,39 @@ main{max-width:1320px!important;padding:0 24px!important}
 .museum-hero{position:relative;min-height:clamp(520px,65vw,720px);margin:24px 0 0;border:1px solid #d7b36a77;border-radius:26px;overflow:hidden;isolation:isolate;background:#102d28;display:flex;align-items:center}.museum-hero-art,.museum-hero-shade{position:absolute;inset:0;width:100%;height:100%}.museum-hero-art{object-fit:cover;object-position:center 42%;z-index:-2}.museum-hero-shade{z-index:-1;background:linear-gradient(90deg,#071d19f2 0%,#0a2823df 43%,#0b241c66 78%,#071b1988 100%),linear-gradient(0deg,#071d19aa,transparent 55%)}
 .museum-hero-content{width:min(760px,76%);padding:clamp(30px,7vw,86px)}.museum-eyebrow,.museum-kicker{display:inline-block;color:#e9c879;font-size:.76rem;font-weight:850;letter-spacing:.17em}.museum-hero h1{font:700 clamp(2.8rem,6.5vw,5.8rem)/1.02 Georgia,serif;color:#fff6e6;max-width:780px;margin:22px 0}.museum-hero h1 em{font-weight:500;color:#e9c879}.museum-hero-content>p{max-width:590px;color:#f0eadc;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.8}.museum-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.museum-primary,.museum-secondary{display:inline-flex;align-items:center;gap:12px;padding:14px 20px;border-radius:30px;text-decoration:none;font-weight:800}.museum-primary{background:#e3c47c;color:#102b24}.museum-secondary{border:1px solid #f2dfb4;color:#fff5df;background:#ffffff12}.museum-hero-caption{margin-top:55px;color:#e8d9b7;font-size:.72rem;letter-spacing:.18em;font-weight:750}
 .museum-welcome{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center;padding:58px clamp(10px,4vw,52px);border-bottom:1px solid #d7b36a44}.museum-welcome h2,.museum-section-heading h2{font:700 clamp(2rem,4vw,3.3rem)/1.12 Georgia,serif;color:#f6edda;margin:12px 0}.museum-welcome>p,.museum-section-heading>p{color:#cbd7cb;line-height:1.85;font-size:1.03rem;margin:0}
-.museum-collections{padding:65px 0 75px}.museum-section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:27px}.museum-section-heading>p{max-width:420px}.museum-collection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.museum-collection-card{position:relative;min-height:270px;display:flex;flex-direction:column;align-items:flex-start;padding:25px;border:1px solid #d6b66c55;border-radius:19px;text-decoration:none;color:#f8f0de;background:linear-gradient(145deg,#173d34,#102b28);overflow:hidden;transition:transform .25s,border-color .25s}.museum-collection-card:before{content:"";position:absolute;width:180px;height:180px;right:-60px;top:-65px;border:1px solid #e0c47c44;border-radius:50%;box-shadow:0 0 0 22px #e0c47c0b,0 0 0 46px #e0c47c08}.museum-collection-card:hover{transform:translateY(-5px);border-color:#e6c978}.collection-number{font-size:.68rem;letter-spacing:.15em;color:#e1c27a;font-weight:850}.collection-icon{font-size:1.65rem;color:#e6c87f;margin:25px 0 8px}.museum-collection-card h3{font:700 1.55rem Georgia,serif;color:#fff0d0;margin:0 0 10px}.museum-collection-card p{font-size:.92rem;line-height:1.7;color:#cbd8cc;margin:0 0 20px;max-width:360px}.collection-link{margin-top:auto;color:#e7c778;font-size:.83rem;font-weight:800}.collection-aj{background:linear-gradient(145deg,#243d38,#172923)}.collection-obj{background:linear-gradient(145deg,#3a3425,#1c2d26)}.collection-oral{background:linear-gradient(145deg,#283b39,#102b28)}.collection-learn{background:linear-gradient(145deg,#263c31,#112d28)}.collection-guide{background:linear-gradient(145deg,#253a37,#142a26)}
+.museum-collections{padding:65px 0 75px}.museum-section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:27px}.museum-section-heading>p{max-width:420px}.museum-collection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.museum-collection-card{position:relative;min-height:270px;display:flex;flex-direction:column;align-items:flex-start;padding:25px;border:1px solid #d6b66c55;border-radius:19px;text-decoration:none;color:#f8f0de;background:linear-gradient(145deg,#173d34,#102b28);overflow:hidden;transition:transform .25s,border-color .25s}.museum-collection-card:before{content:"";position:absolute;width:180px;height:180px;right:-60px;top:-65px;border:1px solid #e0c47c44;border-radius:50%;box-shadow:0 0 0 22px #e0c47c0b,0 0 0 46px #e0c47c08}.museum-collection-card:hover{transform:translateY(-5px);border-color:#e6c978}.collection-number{font-size:.68rem;letter-spacing:.15em;color:#e1c27a;font-weight:850}.collection-icon{font-size:1.65rem;color:#e6c87f;margin:25px 0 8px}.museum-collection-card h3{font:700 1.55rem Georgia,serif;color:#fff0d0;margin:0 0 10px}.museum-collection-card p{font-size:.92rem;line-height:1.7;color:#cbd8cc;margin:0 0 20px;max-width:360px}.collection-link{margin-top:auto;color:#e7c778;font-size:.83rem;font-weight:800}
+
+/* Gentle motion across every homepage collection card */
+.museum-collection-grid .museum-collection-card{
+  animation:heritageCardFloat 6s ease-in-out infinite;
+  will-change:transform;
+  transform-origin:center bottom;
+  box-shadow:0 8px 22px #00000018;
+}
+.museum-collection-grid .museum-collection-card:nth-child(2n){animation-delay:-1.4s}
+.museum-collection-grid .museum-collection-card:nth-child(3n){animation-delay:-2.8s}
+.museum-collection-grid .museum-collection-card:hover,
+.museum-collection-grid .museum-collection-card:focus-visible{
+  animation-play-state:paused;
+  transform:translateY(-9px) scale(1.012);
+  border-color:#e6c978;
+  box-shadow:0 18px 34px #00000045,0 0 0 1px #e6c97833;
+}
+.museum-collection-grid .museum-collection-card:focus-visible{outline:2px solid #e6c978;outline-offset:4px}
+@keyframes heritageCardFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+@media(max-width:520px){
+  .museum-collection-grid .museum-collection-card{animation-duration:6.8s}
+  .museum-collection-grid .museum-collection-card:hover,
+  .museum-collection-grid .museum-collection-card:focus-visible{transform:translateY(-5px) scale(1.005)}
+}
+@media(prefers-reduced-motion:reduce){
+  .museum-collection-grid .museum-collection-card{animation:none!important;transition:none!important;will-change:auto}
+  .museum-collection-grid .museum-collection-card:hover,
+  .museum-collection-grid .museum-collection-card:focus-visible{transform:none}
+}.collection-aj{background:linear-gradient(145deg,#243d38,#172923)}.collection-obj{background:linear-gradient(145deg,#3a3425,#1c2d26)}.collection-oral{background:linear-gradient(145deg,#283b39,#102b28)}.collection-learn{background:linear-gradient(145deg,#263c31,#112d28)}.collection-guide{background:linear-gradient(145deg,#253a37,#142a26)}
 .researchers-showcase{margin:10px 0 45px!important;padding:30px!important;border:1px solid #d7b36a55!important;border-radius:22px;background:#102e28}.section{border-top-color:#d7b36a35!important}.site-footer{background:#061714!important;border-top:1px solid #d7b36a55}
 @media(max-width:800px){main{padding:0 14px!important}.museum-hero{min-height:600px;border-radius:17px}.museum-hero-art{object-position:58% center}.museum-hero-shade{background:linear-gradient(90deg,#071d19ed,#0a2823d9 68%,#0b241c80),linear-gradient(0deg,#071d19cc,transparent 70%)}.museum-hero-content{width:100%;padding:36px 24px}.museum-hero-caption{margin-top:38px}.museum-welcome{grid-template-columns:1fr;gap:15px;padding:36px 8px}.museum-section-heading{display:block}.museum-section-heading>p{margin-top:10px}.museum-collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.museum-collection-card{min-height:250px;padding:20px}}
 @media(max-width:520px){.museum-hero{min-height:610px}.museum-hero h1{font-size:clamp(2.65rem,13vw,4rem)}.museum-hero-content{padding:30px 18px}.museum-primary,.museum-secondary{padding:12px 15px;font-size:.9rem}.museum-collection-grid{grid-template-columns:1fr}.museum-collection-card{min-height:220px}.museum-collections{padding:42px 0}.researchers-showcase{padding:18px!important}}
