@@ -261,3 +261,48 @@ main{max-width:1320px!important;padding:0 24px!important}
   }
   .museum-hero h1{margin:18px 0 22px!important}
 }
+
+
+/* Final mobile hero composition: banner first, welcome copy beneath it */
+@media(max-width:760px){
+  .museum-hero{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    min-height:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+  .museum-hero-art{
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:966/415!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    flex:none!important;
+    z-index:1!important;
+  }
+  .museum-hero-shade{display:none!important}
+  .museum-hero-content{
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    padding:26px 22px 32px!important;
+    margin:0!important;
+    transform:none!important;
+    z-index:2!important;
+  }
+  .museum-hero .museum-eyebrow{display:none!important}
+  .museum-hero h1{
+    margin:0 0 22px!important;
+    opacity:1!important;
+    transform:none!important;
+    animation:none!important;
+  }
+}
