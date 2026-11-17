@@ -148,8 +148,10 @@ main{max-width:1320px!important;padding:0 24px!important}
 .museum-hero h1 .hero-title-intro,.museum-hero h1 .hero-title-finale{display:block}
 .museum-hero h1 .hero-title-brand{display:block;font-style:italic;font-weight:500;line-height:1.06;margin:5px 0;background:linear-gradient(100deg,#e9c879,#fff0bd 48%,#d6a94d 85%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent}
 @media(max-width:760px){
- .museum-hero{min-height:0;align-items:flex-start}
- .museum-hero-content{width:100%;padding:34px 22px 30px}
+ .museum-hero{min-height:0;align-items:flex-start;padding-top:0;background:#081d1b}
+ .museum-hero-art{inset:0 0 auto 0;width:100%;height:auto;aspect-ratio:966/415;object-fit:contain;object-position:center top;z-index:-2;background:#081d1b}
+ .museum-hero-shade{background:linear-gradient(180deg,#081d1b00 0%,#081d1b08 52%,#081d1b 100%);}
+ .museum-hero-content{width:100%;padding:calc(100vw * .43 + 22px) 22px 30px}
  .museum-hero h1{font-size:clamp(2.35rem,8.8vw,3.35rem);line-height:1.08;letter-spacing:-.04em;margin:19px 0 22px;max-width:100%}
  .museum-hero h1 .hero-title-intro{font-size:.78em;letter-spacing:-.025em;margin-bottom:5px}
  .museum-hero h1 .hero-title-brand{margin:3px 0 5px;white-space:nowrap}
